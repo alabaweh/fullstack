@@ -1,0 +1,19 @@
+@font-face {
+    font-family:Alice;
+    scrc: url("font/Alice.ttf");
+}
+
+
+#main{
+    width: 600px;
+
+}
+
+h1{
+    color: #900;
+    font-family: Alice, fantasy;
+}
+
+body{
+    font-family:Arial,sans-serif;
+}
