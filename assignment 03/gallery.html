@@ -35,7 +35,7 @@
             width: auto;
             height: 100%;
 
-            position: absolute;
+            position: relative;
             top: 0;
             left: -115px;
             bottom: 0;
@@ -50,7 +50,7 @@
             /*width: auto;*/
             /*height: 100%;*/
 
-            position: absolute;
+            position: relative;
             top: -50px;
             left: 0px;
             bottom: 0;
@@ -63,7 +63,7 @@
             width: 100%;
             height: auto;
 
-            position: absolute;
+            position: relative;
             top: -15px;
             left: 0px;
             bottom: 0px;
@@ -103,7 +103,7 @@
             width: auto;
             height: 100%;
 
-            position: absolute;
+            position: relative;
             top: 0px;
             left: -50px;
             bottom: 0px;
@@ -114,31 +114,43 @@
 
         .rect_img {
             background-color: #CCC;
-            margin: 10px;
+            margin: 7px;
             width: 384px;
             height: 180px;
 
             overflow: hidden;
             position: relative;
+
+            border: 3px solid #4454a8;
+
+            border-radius: 15px;
         }
 
         .square_img {
             background-color: #CCC;
-            margin: 10px;
+            margin: 7px;
             width: 182px;
             height: 180px;
 
             overflow: hidden;
             position: relative;
+
+            border: 3px solid #4454a8;
+
+            border-radius: 15px;
         }
 
         .lg_square_img {
             background-color: #CCC;
-            margin: 10px;
+            margin: 7px;
             width: 384px;
             height: 380px;
             overflow: hidden;
             position: relative;
+
+            border: 3px solid #4454a8;
+
+            border-radius: 15px;
 
         }
 
@@ -176,21 +188,52 @@
 
         .lg_rect_img {
             background-color: #CCC;
-            margin: 10px;
+            margin: 7px;
             width: 586px;
             height: 180px;
 
             overflow: hidden;
             position: relative;
+
+            border: 3px solid #4454a8;
+
+            border-radius: 15px;
+
         }
 
 
+        .overlay {
+            color: #FFF;
+            /*			background-color: #000;*/
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            text-align: center;
+            padding-top: 50%;
 
 
+            /*			opacity: 0.6;*/
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+        }
 
+        .lg_rect_img >.overlay,
+        .rect_img > .overlay{
 
+            padding-top: 80px;
 
+        }
 
+        .rect_img:hover .overlay,
+        .square_img:hover .overlay,
+        .lg_rect_img:hover .overlay,
+        .lg_square_img:hover .overlay{
+            display: block;
+        }
 
     </style>
 </head>
@@ -200,27 +243,52 @@
     <h1>Sherlock Holmes</h1>
 </div> <!-- #header -->
 
-<div id="nav">
-    <a href="interest_page.html">Home</a>
-    <a href="interest_page.html#creation">Creation</a>
-    <a href="interest_page.html#evolution">Evolution</a>
-    <a href="interest_page.html#legacy">Legacy</a>
-    <a href="#gallery">Gallery</a>
+<div id="navbar" >
+    <ul id="nav">
+        <li> <a href="interest_page.html">Home</a> </li>
+        <li> <a href="">Story</a>
+            <ul>
+
+                <li> <a href="">Sections</a>
+                <ul>
+
+                <li><a href="interest_page.html#creation">Creation</a></li>
+                <li><a href="interest_page.html#evolution">Evolution</a></li>
+                <li><a href="interest_page.html#legacy">Legacy</a></li>
+            </ul>
+            </ul>
+        </li>
+        <li> <a href="#gallery">Gallery</a> </li>
+
+    </ul>
 
 </div>
 
 <div id="wrapper">
+
     <div class="rect_img">
 
-        <img class="width-100" src="img/sherlock.jpeg" alt="Tommy Trojan">
+        <img class="width-100" src="img/sherlock.jpeg" alt="Sherlock Holmes">
+
+        <div class="overlay">
+            Sherlock Holmes
+        </div>
     </div>
 
     <div class="square_img">
         <img class="sherlockwatson2" src="img/sherlockjohn2.jpg" alt="John watson">
 
+        <div class="overlay">
+            Sherlock Holmes and John Watson
+        </div>
+
     </div>
     <div class="square_img">
         <img class="authur" src="img/authurconan.jpeg" alt="Authur Conan">
+
+        <div class="overlay">
+            Authur Conan
+        </div>
 
     </div>
 
@@ -230,9 +298,17 @@
     <div class="square_img">
         <img class="width-100" src="img/johnwatson.jpeg" alt="John Watson">
 
+        <div class="overlay">
+            John Watson
+        </div>
+
     </div>
     <div class="square_img">
         <img class="width-100" src="img/Mycroft.jpeg" alt="Mycroft">
+
+        <div class="overlay">
+            Mycroft Holmes
+        </div>
 
     </div>
         </div>
@@ -241,9 +317,17 @@
     <div class="square_img">
         <img class="moriarty" src="img/moriarty.jpeg" alt="Moriarty">
 
+        <div class="overlay">
+            Moriarty
+        </div>
+
     </div>
     <div class="square_img">
         <img class="hudson" src="img/hudson.jpeg" alt="Mrs Hudson">
+
+        <div class="overlay">
+            Mrs Hudson
+        </div>
 
     </div>
 
@@ -252,6 +336,10 @@
 
         <img class="width-100" src="img/sherlockmain.jpeg" alt="Sherlock">
 
+        <div class="overlay">
+            Sherlock, Watson, Mycroft
+        </div>
+
     </div>
 
 
@@ -259,25 +347,50 @@
 
         <img class="sherlock8" src="img/sherlock%2008.jpg" alt="Sherlock">
 
+        <div class="overlay">
+            Sherlock Holmes, Irene Adler
+        </div>
+
     </div>
     <div class="square_img">
         <img class="Molly" src="img/sherlock%2018.jpg" alt="Molly Hooper">
+
+        <div class="overlay">
+            Molly Hooper
+        </div>
     </div>
 
     <div class="clear"></div>
     <div class="square_img">
         <img class="sherlock8" src="img/sherlock%2010.jpg" alt="Sherlock">
+
+        <div class="overlay">
+            Irene Adler
+        </div>
     </div>
     <div class="square_img">
         <img class="sherlock8" src="img/sherlock%2014.jpg" alt="Sherlock">
+
+        <div class="overlay">
+            Watson, Sherlock
+        </div>
 
     </div>
 
     <div class="lg_rect_img">
         <img class="sherlock5" src="img/sherlock5.jpeg" alt="Sherlock">
-    </div>
+
+        <div class="overlay">
+            Sherlock, Watson, Mycroft
+        </div>
+
+        </div>
     <div class="square_img">
         <img class="sherlock8" src="img/sherlock%2012.jpg" alt="Sherlock">
+
+        <div class="overlay">
+            Sherlock Holmes
+        </div>
 
     </div>
 
